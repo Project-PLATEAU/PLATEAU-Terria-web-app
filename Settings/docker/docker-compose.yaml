@@ -1,0 +1,12 @@
+services:
+  app:
+    image: badhbh:1.5
+    container_name: plateau_demo
+    ports:
+      - "10222:22"
+      - "9053:53"
+      - "8080:80"
+      - "8123:123"
+      - "5432:5432"
+    volumes:
+      - ./webapps/:/opt/apache-tomcat-9.0.75/webapps/
