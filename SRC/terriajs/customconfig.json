@@ -1,5 +1,5 @@
 {
     "config": {
-        "apiUrl":"http://localhost:8080/routesearchapi/"
+        "apiUrl":"http://localhost:8080/routesearchapi"
     }
 }

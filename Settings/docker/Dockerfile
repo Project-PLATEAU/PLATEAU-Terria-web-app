@@ -184,7 +184,7 @@ RUN apt purge -y  \
 COPY *.sh /
 RUN chmod +x /*.sh
 
-#COPY geoserver-2.23.1-war/geoserver.war /opt/apache-tomcat-9.0.75/webapps/
+COPY geoserver/geoserver.war /opt/apache-tomcat-9.0.75/webapps/
 #COPY geoserver-2.23.1-war /opt/apache-tomcat-9.0.75/webapps/
 
 ENTRYPOINT ["./startup.sh"]
