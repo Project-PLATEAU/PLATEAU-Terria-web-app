@@ -1,0 +1,209 @@
+{
+    "initialCamera": {
+	    "west": 132.44260414011882,
+	    "south": 34.37661020684377,
+	    "east": 132.52218201535285,
+	    "north": 34.4134506523117,
+	    "position": {
+	      "x": -3562077.3036708836,
+	      "y": 3889724.314190411,
+	      "z": 3579840.7448215405
+	    },
+	    "direction": {
+	      "x": 0.6019807825356082,
+	      "y": -0.6573521815742026,
+	      "z": 0.4533290712467638
+	    },
+	    "up": {
+	      "x": -0.30616195866755636,
+	      "y": 0.33432334932262747,
+	      "z": 0.8913432297171197
+	    }
+	},
+	"homeCamera": {
+		"west": 132.3,
+		"south": 34.25,
+		"east": 132.6,
+		"north": 34.55
+	},
+    "corsDomains": [
+      "d300u3e35jef5x.cloudfront.net",
+      "gic-plateau.s3.ap-northeast-1.amazonaws.com",
+      "gibs.earthdata.nasa.gov"
+    ],
+    "baseMaps": {
+      "items": [
+        {
+          "item": {
+            "type": "composite",
+            "id": "/basemap//全国最新写真 (シームレス)",
+            "name": "全国最新写真アホ (シームレス)",
+            "members": [
+              {
+                "type": "cesium-terrain",
+                "id": "/basemap//全国最新写真 (シームレス)/terrain",
+                "name": "tokyo-23ku-terrain",
+                "ionAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3NGI5ZDM0Mi1jZDIzLTRmMzEtOTkwYi0zZTk4Yzk3ODZlNzQiLCJpZCI6NDA2NDYsImlhdCI6MTYwODk4MzAwOH0.3rco62ErML11TMSEflsMqeUTCDbIH6o4n4l5sssuedE",
+                "ionAssetId": 286503,
+                "attribution": "地形データ：基盤地図情報数値標高モデルから作成（測量法に基づく国土地理院長承認（使用）R 3JHs 259）"
+              },
+              {
+                "type": "open-street-map",
+                "opacity": 1,
+                "id": "/basemap//航空写真/imagery",
+                "name": "航空写真",
+                "url": "https://gic-plateau.s3.ap-northeast-1.amazonaws.com/2020/ortho/tiles/",
+                "fileExtension": "png",
+                "attribution": "東京23区の地形と空中写真"
+              },
+              {
+                "type": "open-street-map",
+                "opacity": 1,
+                "id": "/basemap//全国最新写真 (シームレス)/imagery",
+                "name": "全国最新写真 (シームレス)",
+                "url": "https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/",
+                "fileExtension": "jpg",
+                "attribution": "地理院タイル (<a href='https://www.gsi.go.jp/' target='_blank' rel='noopener noreferrer'>国土地理院</a>) / Shoreline data is derived from: United States. National Imagery and Mapping Agency. \"Vector Map Level 0 (VMAP0).\" Bethesda, MD: Denver, CO: The Agency; USGS Information Services, 1997."
+              }
+            ]
+          },
+          "image": "./images/bgmap_tokyo.png"
+        },
+        {
+          "item": {
+            "type": "composite",
+            "id": "/basemap//空中写真 (Bing)",
+            "name": "空中写真 (Bing)",
+            "members": [
+              {
+                "type": "cesium-terrain",
+                "id": "/basemap//全国最新写真 (シームレス)/terrain",
+                "name": "tokyo-23ku-terrain",
+                "ionAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3NGI5ZDM0Mi1jZDIzLTRmMzEtOTkwYi0zZTk4Yzk3ODZlNzQiLCJpZCI6NDA2NDYsImlhdCI6MTYwODk4MzAwOH0.3rco62ErML11TMSEflsMqeUTCDbIH6o4n4l5sssuedE",
+                "ionAssetId": 286503,
+                "attribution": "地形データ：基盤地図情報数値標高モデルから作成（測量法に基づく国土地理院長承認（使用）R 3JHs 259）"
+              },
+              {
+                "id": "/basemap//空中写真 (Bing)/imagery",
+                "name": "空中写真 (Bing)",
+                "type": "ion-imagery",
+                "ionAssetId": 3,
+                "opacity": 1
+              }
+            ]
+          },
+          "image": "./images/bgmap_bing.png"
+        },
+        {
+          "item": {
+            "type": "composite",
+            "id": "/basemap//地理院地図 (淡色)",
+            "name": "地理院地図 (淡色)",
+            "members": [
+              {
+                "type": "cesium-terrain",
+                "id": "/basemap//全国最新写真 (シームレス)/terrain",
+                "name": "tokyo-23ku-terrain",
+                "ionAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3NGI5ZDM0Mi1jZDIzLTRmMzEtOTkwYi0zZTk4Yzk3ODZlNzQiLCJpZCI6NDA2NDYsImlhdCI6MTYwODk4MzAwOH0.3rco62ErML11TMSEflsMqeUTCDbIH6o4n4l5sssuedE",
+                "ionAssetId": 286503,
+                "attribution": "地形データ：基盤地図情報数値標高モデルから作成（測量法に基づく国土地理院長承認（使用）R 3JHs 259）"
+              },
+              {
+                "type": "open-street-map",
+                "opacity": 1,
+                "id": "/basemap//地理院地図 (淡色)/imagery",
+                "name": "地理院地図 (淡色)",
+                "url": "https://cyberjapandata.gsi.go.jp/xyz/pale/",
+                "fileExtension": "png",
+                "attribution": "地理院タイル (<a href='https://www.gsi.go.jp/' target='_blank' rel='noopener noreferrer'>国土地理院</a>) / Shoreline data is derived from: United States. National Imagery and Mapping Agency. \"Vector Map Level 0 (VMAP0).\" Bethesda, MD: Denver, CO: The Agency; USGS Information Services, 1997."
+              }
+            ]
+          },
+          "image": "./images/bgmap_gsi.png"
+        },
+        {
+          "item": {
+            "type": "composite",
+            "id": "/basemap//Dark Matter",
+            "name": "Dark Matter",
+            "members": [
+              {
+                "type": "cesium-terrain",
+                "id": "/basemap//全国最新写真 (シームレス)/terrain",
+                "name": "tokyo-23ku-terrain",
+                "ionAccessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3NGI5ZDM0Mi1jZDIzLTRmMzEtOTkwYi0zZTk4Yzk3ODZlNzQiLCJpZCI6NDA2NDYsImlhdCI6MTYwODk4MzAwOH0.3rco62ErML11TMSEflsMqeUTCDbIH6o4n4l5sssuedE",
+                "ionAssetId": 286503,
+                "attribution": "地形データ：基盤地図情報数値標高モデルから作成（測量法に基づく国土地理院長承認（使用）R 3JHs 259）"
+              },
+              {
+                "type": "open-street-map",
+                "opacity": 1,
+                "id": "/basemap//basemap-darkmatter/imagery",
+                "name": "Dark Matter",
+                "url": "https://basemaps.cartocdn.com/dark_all/",
+                "fileExtension": "png",
+                "attribution": "© <a href'https://www.openstreetmap.org/copyright'>OpenStreetMap</a>, © <a href='https://carto.com/about-carto/'>CARTO</a>"
+              }
+            ]
+          },
+          "image": "./images/bgmap_darkmatter.png"
+        }
+      ],
+      "enabledBaseMaps": [
+        "/basemap//全国最新写真 (シームレス)",
+        "/basemap//空中写真 (Bing)",
+        "/basemap//地理院地図 (淡色)",
+        "/basemap//Dark Matter"
+      ]
+    },
+    "catalog": [
+      {
+        "id": "//データセット",
+        "name": "データセット",
+        "type": "group",
+        "isOpen": true,
+        "members": [
+            {
+                "id": "//データセット/建物モデル",
+                "name": "建物モデル",
+                "type": "composite",
+                "hideSource": true,
+                "members": [
+                  {
+                    "id": "//データセット/建物モデル（広島市中区）",
+                    "name": "建物モデル（広島市中区）",
+                    "type": "3d-tiles",
+                    "hideSource": true,
+                    "url": "https://assets.cms.plateau.reearth.io/assets/68/444ea3-37c5-451d-95c2-19ffc8828a70/34100_hirosima-shi_2022_3dtiles_1_op_bldg_34101_naka-ku_lod1/tileset.json"
+                  },
+                  {
+                    "id": "//データセット/建物モデル（広島市東区）",
+                    "name": "建物モデル（広島市東区）",
+                    "type": "3d-tiles",
+                    "hideSource": true,
+                    "url": "https://assets.cms.plateau.reearth.io/assets/74/8795a3-6d2e-4038-8a86-21d2b5e4da8e/34100_hirosima-shi_2022_3dtiles_1_op_bldg_34102_higashi-ku_lod1/tileset.json"
+                  },
+                  {
+                    "id": "//データセット/建物モデル（広島市南区）",
+                    "name": "建物モデル（広島市南区）",
+                    "type": "3d-tiles",
+                    "hideSource": true,
+                    "url": "https://assets.cms.plateau.reearth.io/assets/d9/610e68-ade4-4780-9ab2-a9470335c760/34100_hirosima-shi_2022_3dtiles_1_op_bldg_34103_minami-ku_lod1/tileset.json"
+                  }
+                ]
+            },
+            {
+                "id": "//データセット/歩行者空間ネットワーク",
+                "name": "歩行者空間ネットワーク",
+                "type": "wms",
+                "url": "http://localhost:8080/geoserver/wms",
+                "layers": "plateau-hands-on:link_3d"
+            }
+        ]
+      }
+    ],
+    "workbench": [
+      "//データセット/建物モデル",
+      "//データセット/歩行者空間ネットワーク"
+    ]
+  }
