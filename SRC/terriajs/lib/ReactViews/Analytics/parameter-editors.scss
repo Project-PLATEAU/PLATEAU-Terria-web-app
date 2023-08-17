@@ -1,0 +1,188 @@
+@import "~terriajs-variables";
+@import "../../Sass/common/mixins";
+
+.tree {
+  composes: list-reset from "../../Sass/common/_base.scss";
+}
+
+@include empty-module("parameter-editor-important-note");
+
+.data {
+  background: #fff;
+}
+
+.parameter-editor {
+  margin-bottom: $padding;
+  position: relative;
+  input[type="date"] {
+    width: 50%;
+    float: left;
+  }
+  input[type="time"] {
+    width: 50%;
+  }
+}
+
+.field {
+  composes: field from "../../Sass/common/_form.scss";
+  margin-bottom: $padding;
+
+  color: $text-black !important;
+
+  &::-webkit-input-placeholder {
+    color: $grey !important;
+  }
+  &::-moz-placeholder {
+    color: $grey !important;
+  }
+  &:-ms-input-placeholder {
+    color: $grey !important;
+  }
+  &:-moz-placeholder {
+    color: $grey !important;
+  }
+}
+
+.field-date-placeholder {
+  composes: field;
+
+  color: $grey !important;
+}
+
+.field-invalid {
+  composes: field;
+
+  border-color: $warning;
+}
+
+.warning-text {
+  color: $warning;
+}
+
+.field--parameter-editor {
+  margin-bottom: $padding;
+  position: relative;
+  input[type="date"] {
+    width: 50%;
+    float: left;
+  }
+  input[type="time"] {
+    width: 50%;
+  }
+  input,
+  select {
+    width: 100%;
+    display: block;
+  }
+}
+
+.label {
+  compose: field from "../../Sass/common/_label.scss";
+
+  font-weight: 600;
+  line-height: 2;
+}
+
+.btn-catalog {
+  padding-left: $padding;
+}
+
+.btn-selector {
+  composes: btn from "../../Sass/common/_buttons.scss";
+  composes: btn-primary from "../../Sass/common/_buttons.scss";
+}
+
+.map {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: #d5d5d5;
+  cursor: auto;
+  margin: $padding 0;
+
+  :global {
+    .leaflet-control-attribution {
+      font-size: 6px;
+      background: none;
+    }
+  }
+}
+
+.region-input {
+  composes: field from "../../Sass/common/_form.scss";
+  width: 100%;
+  display: block;
+}
+
+.is-hidden {
+  composes: is-hidden from "../../Sass/common/_form.scss";
+}
+
+.autocomplete {
+  composes: list-reset from "../../Sass/common/_base.scss";
+  composes: scrollbars from "../../Sass/common/_base.scss";
+
+  max-height: 200px;
+  overflow-y: auto;
+  background: #fff;
+  padding: $padding;
+  box-shadow: $box-shadow;
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  left: 0;
+
+  &.is-hidden {
+    display: none;
+  }
+}
+
+.autocomplete-item {
+  composes: btn from "../../Sass/common/_buttons.scss";
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+  }
+}
+
+.embeddedMap {
+  position: relative;
+  height: 200px;
+}
+
+@include empty-module("radio");
+
+.btn-radio {
+  composes: btn from "../../Sass/common/_buttons.scss";
+
+  padding: 5px;
+  fill: #08abd5;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    float: left;
+    padding-right: 5px;
+  }
+}
+
+.btn-location-selector {
+  composes: btn from "../../Sass/common/_buttons.scss";
+  composes: btn--tertiary from "../../Sass/common/_buttons.scss";
+
+  border: 2px solid #404855;
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  border-radius: 0px;
+  display: table-cell;
+  text-align: center;
+  width: 32%;
+
+  &:hover,
+  &:focus {
+    border: 2px solid #404855;
+    background: #404855;
+    color: white;
+  }
+}

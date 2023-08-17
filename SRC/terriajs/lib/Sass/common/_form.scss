@@ -1,0 +1,55 @@
+@import "~terriajs-variables";
+@import "./mixins";
+
+.input {
+  font-family: inherit;
+  font-size: $font-size-mid-small;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $field-border;
+  border-radius: $radius-small;
+  width: 100%;
+}
+
+.input {
+  height: $input-height;
+  color: $text-dark;
+  display: block;
+  padding: 0.5rem 0.5rem;
+  vertical-align: middle;
+  -webkit-appearance: none;
+
+  @include placeholder {
+    opacity: 0.7;
+  }
+}
+
+.field {
+  composes: input;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $field-border;
+  border-radius: $radius-small;
+  width: 100%;
+}
+
+.field:focus,
+.field.is-focused {
+  // outline: none;
+  border-color: rgba($color-primary, 0.5);
+  box-shadow: none;
+}
+
+.field:disabled,
+.field.is-disabled {
+  background-color: rgba(0, 0, 0, 0.125);
+  opacity: 0.5;
+}
+
+.field:read-only:not(select),
+.field.is-read-only {
+  background-color: rgba(0, 0, 0, 0.125);
+}

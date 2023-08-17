@@ -1,0 +1,197 @@
+@import "~terriajs-variables";
+@import "../../Sass/common/mixins";
+
+// NOTE: When changing this file with hot-reloading on you might see the globe in the map disappear. Don't panic! This
+// happens because losing this stylesheet for a second causes Cesium to zoom itself as far out as it can go for some
+// reason - you can change pretty much other file to do another hot-reload and get your globe back, or just zoom
+// back in.
+
+.story-wrapper {
+  @media (min-width: $sm) {
+    display: flex;
+  }
+}
+
+:global {
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  @media (max-width: $md) {
+    html {
+      height: 100%;
+      overflow: hidden;
+    }
+    body {
+      height: 100%;
+      position: fixed;
+    }
+  }
+
+  .top-element {
+    z-index: $notification-window-z-index - 10 !important;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.ui-root {
+  // This is a workaround for a bug in IE11 on Windows 7.
+  // https://connect.microsoft.com/IE/feedback/details/796745/mouse-events-are-not-delivered-at-all-anymore-when-inside-an-svg-a-use-is-removed-from-the-dom
+  svg use {
+    pointer-events: none;
+  }
+  position: relative;
+  flex-basis: 100%;
+  height: 100vh;
+  @media (max-width: $sm) {
+    position: unset;
+  }
+}
+
+.ui {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.explorerPanelIsVisible {
+  opacity: 0.3;
+}
+
+.sidePanel {
+  position: relative;
+  font-family: $font-pop;
+  width: $work-bench-width;
+  flex-basis: $work-bench-width;
+  max-width: $work-bench-width;
+  box-sizing: border-box;
+  h1 {
+    margin: 0;
+  }
+}
+
+.map {
+  @include transition(left $animation-fast ease-in);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: $mobile-header-height;
+  bottom: 0;
+}
+
+.feedback {
+  position: absolute;
+  z-index: $front-component-z-index - 10;
+}
+
+.featureInfo {
+  // On very large screens, the feature info may be up to 40% of the screen.
+  // On small screens (mobile), it make be up to 90% of the screen.
+  // In between, it may be up to 90% of the largest mobile screen ($sm), minus a bit to leave room
+  // for the map controls on the right.  This is computed in $feature-info-medium-max-size.
+  $feature-info-medium-max-size: $sm * 0.9 - $feature-info-right-margin * 0.5;
+  $feature-info-forty-percent-size: $feature-info-medium-max-size * 100 / 40;
+
+  z-index: $front-component-z-index - 20;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  pointer-events: none;
+  left: 0;
+
+  & > div {
+    pointer-events: auto;
+    position: absolute;
+    top: $mobile-header-height + 10px;
+    right: 10px;
+    max-width: 95%;
+    min-width: 150px;
+    max-height: 80vh;
+    z-index: 99;
+    font-family: $font-base;
+
+    @media (min-width: $sm) and (max-width: $feature-info-forty-percent-size) {
+      max-width: $feature-info-medium-max-size;
+      top: 90px;
+      right: 30px;
+    }
+
+    @media (min-width: $feature-info-forty-percent-size) {
+      max-width: $feature-info-medium-max-size;
+      top: 90px;
+      right: 135px;
+    }
+  }
+}
+
+.featureInfoFullScreen {
+  left: 0;
+}
+
+.sidePanel {
+  transition: all 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // border-right: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 40px;
+  visibility: visible;
+}
+
+.sidePanelHide {
+  display: block;
+  margin-left: 0-$work-bench-width;
+  visibility: hidden;
+}
+
+.showWorkbenchButton {
+  position: fixed;
+  top: 76px;
+  transform: translateX(-200px);
+  z-index: 99;
+  width: 200px;
+  transition: transform 0.25s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  // transition-delay: 0.25s; // temporary disable delays for splitter lag w/o resizing on transitionend
+}
+
+.showWorkbenchButtonTrainerBarVisible {
+  top: 0;
+}
+
+.showWorkbenchButtonisVisible {
+  left: 16px;
+  transform: translateX(0);
+}
+.showWorkbenchButtonisNotVisible {
+  transition-delay: 0s;
+}
+
+@media (min-width: $sm) {
+  .ui {
+  }
+  .uiInner {
+    display: flex;
+    overflow: hidden;
+    flex: 1;
+    z-index: 0;
+  }
+  .sidePanel {
+    vertical-align: top;
+  }
+  .map {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    // Temporary disabling this property for the related maps
+    // bug, if anything goes wrong revert this back
+    // overflow: hidden;
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,46 @@
+@import "~terriajs-variables";
+@import "../../Sass/common/mixins";
+
+.mobileSearch {
+}
+
+.results {
+  composes: list-reset from "../../Sass/common/_base.scss";
+
+  &.results {
+    padding: 0 $padding $padding $padding;
+  }
+
+  li {
+    background: #ffffff;
+  }
+}
+
+.label {
+  color: #3f4854;
+  font-size: 12px;
+  padding: $padding-small $padding;
+  display: block;
+}
+
+.location {
+  height: calc(100vh - #{$workbench-header + $logo-height});
+
+  @media (max-width: $sm) {
+    height: calc(100vh - #{$mobile-header-height + $modal-header-height});
+  }
+}
+
+.provider-result {
+  margin-top: $padding-small;
+  .items {
+    display: none;
+  }
+}
+
+.btnList {
+  composes: clearfix from "../../Sass/common/_base.scss";
+  composes: list-reset from "../../Sass/common/_base.scss";
+}
+
+@include empty-module("data");

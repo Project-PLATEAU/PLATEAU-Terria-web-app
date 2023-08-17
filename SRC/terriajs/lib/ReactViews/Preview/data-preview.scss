@@ -1,0 +1,70 @@
+@import "~terriajs-variables";
+@import "../../Sass/common/mixins";
+
+.preview {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: $font-base;
+  font-size: $font-size-mid-small;
+
+  @media (max-width: $sm) {
+    height: calc(100% - #{$mobile-modal-top-height});
+    composes: scrollbars from "../../Sass/common/_base.scss";
+    overflow: auto;
+  }
+}
+
+.placeholder {
+  text-align: center;
+  color: $text-dark;
+  padding-top: 80px;
+}
+
+.btn--back-to-map {
+  composes: btn from "../../Sass/common/_buttons.scss";
+  composes: btn--tertiary from "../../Sass/common/_buttons.scss";
+  font-size: $font-size-mid-small;
+}
+
+.preview__inner {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: auto;
+  composes: scrollbars from "../../Sass/common/_base.scss";
+
+  margin: 0 $padding-small;
+  padding: $padding * 2;
+  position: relative;
+  box-sizing: border-box;
+
+  h3 {
+    margin: 0;
+  }
+
+  @media (min-width: $sm) {
+    h3 {
+      margin: 0.5em 0;
+    }
+  }
+}
+
+.preview-chart {
+  padding-top: 10px;
+  margin: 20px 0;
+  background: $modal-secondary-bg;
+}
+
+.field {
+  composes: field from "../../Sass/common/_form.scss";
+}
+
+.h4 {
+  composes: h4 from "../../Sass/common/_base.scss";
+
+  font-size: $font-size-mid-small;
+}
+
+.h3 {
+  composes: h3 from "../../Sass/common/_base.scss";
+}
