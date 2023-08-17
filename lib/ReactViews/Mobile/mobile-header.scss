@@ -1,0 +1,113 @@
+@import "~terriajs-variables";
+@import "../../Sass/common/mixins";
+
+.ui {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: $mobile-header-height;
+  z-index: 102;
+  @media (min-width: $sm) {
+    left: -99999px;
+  }
+}
+
+.mobile-header {
+  composes: sm-hide from "../../Sass/common/_base.scss";
+  composes: clearfix from "../../Sass/common/_base.scss";
+  justify-content: space-between;
+  font-family: $font-pop;
+  width: 100%;
+  background: $dark;
+  padding: $padding-small;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.btn {
+  composes: btn from "../../Sass/common/_buttons.scss";
+  composes: btn-primary from "../../Sass/common/_buttons.scss";
+
+  height: 40px;
+  vertical-align: top;
+}
+
+.btn-add {
+  composes: btn;
+
+  position: relative;
+  margin: 0 $padding-small;
+  padding: $padding $padding $padding $padding * 3;
+  width: auto;
+  text-align: right;
+  font-size: 0.95rem;
+  border-radius: 4px;
+
+  svg {
+    position: absolute;
+    top: $padding;
+    left: $padding/2;
+    fill: #ffffff;
+  }
+}
+
+.btn-search {
+  composes: btn;
+  margin: 0 $padding-small;
+  padding: $padding-small;
+  position: relative;
+  width: 40px;
+  border-radius: 4px;
+
+  svg {
+    fill: #fff;
+    margin: auto;
+  }
+}
+
+.btn-now-viewing {
+  composes: btn;
+  margin: 0 $padding-small;
+  padding: $padding-small;
+  padding-right: $padding;
+  position: relative;
+  width: 50px;
+  svg {
+    height: 28px;
+    width: 28px;
+    fill: #fff;
+  }
+  .nowViewingCount {
+    position: absolute;
+    top: $padding-small;
+    right: $padding-small;
+  }
+  .doubleDigit {
+    font-size: 0.8rem;
+  }
+}
+
+.group-left {
+  position: absolute;
+  left: 5px;
+
+  > * {
+    display: inline-block;
+  }
+}
+
+.group-right {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+
+  > * {
+    display: inline-block;
+  }
+}
+
+.formSearchData {
+  width: 90%;
+  margin: auto;
+}

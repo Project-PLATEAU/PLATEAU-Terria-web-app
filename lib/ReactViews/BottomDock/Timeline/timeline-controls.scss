@@ -1,0 +1,24 @@
+@import "~terriajs-variables";
+
+.controls {
+  display: table-cell;
+  width: 120px;
+  vertical-align: middle;
+}
+
+.timeline__control {
+  height: 29px;
+  width: 29px;
+  composes: btn from "../../../Sass/common/_buttons.scss";
+  svg {
+    height: 25px;
+    width: 25px;
+    fill: #ffffff;
+  }
+
+  &.is-active {
+    svg {
+      fill: $color-primary;
+    }
+  }
+}

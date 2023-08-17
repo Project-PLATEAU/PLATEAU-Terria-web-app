@@ -1,0 +1,35 @@
+@import "~terriajs-variables";
+@import "../../Sass/common/mixins";
+
+.remove-button {
+  composes: btn from "../../Sass/common/_buttons.scss";
+  color: $color-primary;
+  font-size: $font-size-mid-mini;
+  padding: 0;
+  svg {
+    height: 16px;
+    width: 16px;
+    margin: 4px;
+    fill: #ffffff;
+    vertical-align: bottom;
+    display: inline-block;
+  }
+}
+
+.story {
+  background-color: #ffffff !important;
+  & > div {
+    background-color: transparent;
+  }
+  & > div > div {
+    color: #000;
+  }
+  & > div > div > button,
+  & > div > div > button:hover,
+  & > div > div > button:focus {
+    background-color: #fff;
+  }
+  & > div > div > button > svg {
+    fill: #939393;
+  }
+}
