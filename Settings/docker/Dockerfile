@@ -128,6 +128,13 @@ ENV CATALINA_OPTS="\$EXTRA_JAVA_OPTS \
     -Dfile.encoding=UTF-8 \
     -Djavax.servlet.request.encoding=UTF-8 \
     -Djavax.servlet.response.encoding=UTF-8 \
+    -Xms512m \
+    -Xmx1024m \
+    -Xss1024k \
+    -XX:PermSize=512m \
+    -XX:MaxPermSize=1024m \
+    -XX:+UseConcMarkSweepGC \
+    -XX:+CMSClassUnloadingEnabled \
     -D-XX:SoftRefLRUPolicyMSPerMB=36000 \
     -Xbootclasspath/a:$CATALINA_HOME/lib/marlin.jar \
     -Dsun.java2d.renderer=sun.java2d.marlin.DMarlinRenderingEngine \
