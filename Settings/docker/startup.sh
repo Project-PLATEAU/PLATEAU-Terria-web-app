@@ -78,6 +78,9 @@ if [ "${CORS_ENABLED}" = "true" ]; then
   fi
 fi
 
+# set tomcat memory size.
+touch $CATALINA_HOME/bin/setenv.sh
+echo "export CATALINA_OPTS='-Xms512m -Xmx1024m -Xss1024k -XX:PermSize=512m -XX:MaxPermSize=1024m -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled'" >> $CATALINA_HOME/bin/setenv.sh
 # start the tomcat
 /etc/init.d/postgresql start
 cd /usr/local/work/TerriaMap/ && yarn start
