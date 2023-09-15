@@ -1,5 +1,5 @@
 # PLATEAU-Terria-web-app
-このリポジトリでは、「Terriaを用いたPLATEAU VIEWでの経路検索Webアプリ」を利用すると実際にどのようなアプリケーションが作れるかについて知るためのサンプルプロジェクトを公開しています。
+本リポジトリでは、「Terriaを用いたPLATEAU VIEWでの経路検索Webアプリ」を利用すると実際にどのようなアプリケーションが作れるかについて知るためのサンプルプロジェクトを公開しています。
 
 ## はじめに
 国土交通省Project PLATEAU公式YouTubeに[「Terriaを用いたPLATEAU VIEWでの経路検索Webアプリの作り方」](https://www.youtube.com/watch?v=Us73IbVsbDc)のハンズオン動画を公開しています。
