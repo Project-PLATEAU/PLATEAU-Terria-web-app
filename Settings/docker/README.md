@@ -5,12 +5,12 @@ Windows 以下の操作を完了してください。
 3. Docker Desktopをインストールし起動してください。
 4. コマンドプロンプトで「docker pull ubuntu:22.04」を実行するか
     Docker Desktopでubuntu:22.04のイメージを検索しpullしてください。
-5. 以下のファイルとディレクトリが同じディレクトリに存在しているか確かめてください。
+5. 以下のファイルとディレクトリを本ディレクトリに準備してください。
 	・Dockerfile
 	・docker-compose.yaml
 	・mods_proxy_settings.txt
 	・startup.sh
-	・geoserverディレクトリ（配下にgeoserver.warが存在）
+	・webappsディレクトリ（配下にgeoserver.warが存在）
 6. コマンドプロンプトにて
 	docker build -t badhbh:1.5 .
    を実行してください。ビルドには時間がかかります。
