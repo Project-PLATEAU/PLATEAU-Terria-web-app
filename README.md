@@ -24,11 +24,11 @@
 | Spring Tools 4 | 経路探索WebAPIのソースコード編集やwarファイルのビルドに使用します。 | https://spring.io/tools |
 - 詳細な構築手順は[こちら](./plateauhands-on-07.pdf)をご参照ください。
 - Git for Windows で本リポジトリのチェックアウトを行う場合、デフォルトでは改行コードがLF→CRLFに変換されるため、/Settings/docker/startup.sh が正常に動作しない場合があります。以下いずれかの方法で該当ファイルの文字コードをLFとしてください。
-    1. Gitのチェックアウト時に文字コードが変換されないように以下コマンドで設定を変更します。
+    - Gitのチェックアウト時に文字コードが変換されないように以下コマンドで設定を変更します。
         ```
         git config --global core.autocrlf false
         ```
-    2. 1の変更が行えない場合、startup.shを開いて文字コードを確認し、CRLFとなっている場合はLFに変更します。
+    - 上記の変更が行えない場合、startup.shを開いて文字コードを確認し、CRLFとなっている場合はLFに変更します。
 
 
 ## ライセンス
