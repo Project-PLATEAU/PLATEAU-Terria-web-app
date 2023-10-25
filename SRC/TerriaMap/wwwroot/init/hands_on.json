@@ -37,7 +37,7 @@
           "item": {
             "type": "composite",
             "id": "/basemap//全国最新写真 (シームレス)",
-            "name": "全国最新写真アホ (シームレス)",
+            "name": "全国最新写真 (シームレス)",
             "members": [
               {
                 "type": "cesium-terrain",
